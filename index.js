@@ -3,8 +3,14 @@ require("dotenv").config();
 const app = express();
 const cors = require("cors");
 app.use(express.json());
-app.use(cors());
 const { jobs } = require("./db");
+app.use(
+  cors({
+    origin: [],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 const PORT = process.env.PORT || 5000;
 
