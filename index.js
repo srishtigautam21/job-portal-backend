@@ -6,7 +6,7 @@ app.use(express.json());
 const { jobs } = require("./db");
 app.use(
   cors({
-    origin: [],
+    origin: ["https://job-portal-frontend-sepia.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
