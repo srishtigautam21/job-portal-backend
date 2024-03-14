@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-console.log("here", process.env.mongo_username);
 
 mongoose.connect(
   `mongodb+srv://${process.env.mongo_username}:${process.env.mongo_password}cluster0.gelbqey.mongodb.net/JobPortalDb`
